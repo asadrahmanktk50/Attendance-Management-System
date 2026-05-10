@@ -150,11 +150,8 @@ Make sure MySQL server is running before starting the application.
 ---
 
 ## Demo Video
-
-link will be shared here for video.
-
-Example:
-https://youtube.com/my-video-link
+Click on the below link:
+https://youtu.be/Z19kCGrshec
 
 ---
 

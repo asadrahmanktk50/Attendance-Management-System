@@ -1,84 +1,106 @@
 # Attendance Management System
 
-## About the Project
+## Project Description
 
-This project is a Java-based system developed for our OOP semester course.
-The purpose of this project is to manage students, teachers, courses, sections, and attendance through a simple graphical interface.
+This project is a Java-based GUI application developed for the Object-Oriented Programming semester project. The system is designed to manage teachers, students, courses, sections, sessions, and attendance in an organized way.
 
-Instead of handling attendance manually, this system allows teachers and admins to perform all tasks in an organized way using a GUI built with Java Swing.
+The application is developed using Java Swing for the graphical interface and MySQL for database management.
 
----
-
-## Objective
-
-The main goal of this project was to apply Object-Oriented Programming concepts in a practical system and understand how different parts of a software system work together.
+The main purpose of this project is to apply Object-Oriented Programming concepts in a practical system and understand how GUI, database, and business logic work together in a real application.
 
 ---
 
-## Group Member(Only Myself)
+## Group Member
 
-Asad Khan
+Name: Asad Rahman
 CMS ID: 023-25-0203
-Section: BSAI-B
+Section: BS(AI)-B-II
 
 ---
 
-## OOP Concepts Used
+## Purpose of the Project
 
-* Classes and Objects
-* Encapsulation (private variables with methods)
-* Inheritance (User → Admin, Teacher, Student)
-* Abstraction (abstract User class)
-* Polymorphism (method overriding like toString)
+In many educational environments, attendance and section management are handled manually. This project provides a simple computerized solution where Admins and Teachers can manage academic records more efficiently.
+
+The system supports role-based access and provides separate functionalities for Admin and Teacher users.
 
 ---
 
-## Project Structure
+## Main Modules
 
-The project is divided into different parts:
+### Model Package
 
-* model → contains classes like User, Student, Section
-* dao → handles database queries
-* service → contains logic of the system
-* ui → all GUI screens
-* main → starting point of the program
+Contains entity classes such as:
+
+* User
+* Admin
+* Teacher
+* Student
+* Course
+* Section
+* ClassSession
+
+### DAO Package
+
+Handles database operations and SQL queries.
+
+### Service Package
+
+Contains the business logic of the application.
+
+### UI Package
+
+Contains all GUI screens developed using Java Swing.
+
+### Main Package
+
+Contains the main class used to start the application.
 
 ---
 
 ## Main Features
 
-Admin can:
+### Admin Features
 
-* Add teachers
-* Add students
-* Create courses and sections
-* Enroll students into sections
-* Approve new admins
+* Add Teachers
+* Add Students
+* Create Courses
+* Create Sections
+* Enroll Students into Sections
+* Approve New Admins
 
-Teacher can:
+### Teacher Features
 
-* Create class sessions
-* Mark attendance using checkboxes
-* View attendance by student
-* View attendance by session
+* Create Class Sessions
+* Mark Attendance using Checkboxes
+* View Attendance by Student
+* View Attendance by Session
 
 ---
 
-## Attendance System
+## OOP Concepts Used
 
-The teacher selects a section and session.
-All students in that section appear as a list with checkboxes.
+The following OOP concepts are used in this project:
 
-* Checked → Present
-* Unchecked → Absent
+* Classes and Objects
+* Encapsulation
+* Inheritance
+* Abstraction
+* Polymorphism
+* Collections
+* Exception Handling
 
-Attendance is stored in the database and duplicate entries are prevented.
+Example:
+
+* User is an abstract base class.
+* Admin, Teacher, and Student inherit from User.
+* Method overriding is used through methods like toString().
 
 ---
 
 ## Database
 
-We used MySQL for storing data.
+The project uses MySQL database.
 
 Main tables:
 
@@ -89,65 +111,60 @@ Main tables:
 * class_sessions
 * attendance
 
+The database and tables are automatically created by the program when the application starts.
+
 ---
 
-## Tools Used
+## Requirements
 
-* Java (JDK 8 or above)
-* Java Swing
-* MySQL
-* JDBC
+* Java JDK 8 or above
+* MySQL Server
+* MySQL Connector JAR file
+
+---
+
+## How to Compile
+
+Compile the project using:
+
+javac -cp "lib/*" -d bin src/model/*.java src/util/*.java src/dao/*.java src/service/*.java src/ui/*.java src/main/*.java
 
 ---
 
 ## How to Run
 
-1. Compile the project:
-
-javac -cp "lib/*" -d bin src/model/*.java src/util/*.java src/dao/*.java src/service/*.java src/ui/*.java src/main/*.java
-
-2. Run the project:
+Run the project using:
 
 java -cp "bin;lib/*" main.MainApp
 
-3. Make sure MySQL is running and database credentials are correct in DatabaseManager.java.
-
 ---
 
-## What I Learned
+## Database Configuration
 
-Through this project, I learned:
+Update database username and password in:
 
-* How to design a system using OOP
-* How Java connects with a database
-* How GUI applications are built
-* How to debug and fix real issues
+util/DatabaseManager.java
 
----
-
-## Limitations
-
-* UI is basic
-* No password security
-* No student login
-
----
-
-## Future Improvements
-
-* Improve UI design
-* Add reports
-* Add quiz functionality
-* Add student panel
+Make sure MySQL server is running before starting the application.
 
 ---
 
 ## Demo Video
 
-link will be shared here
+link will be shared here for video.
+
+Example:
+https://youtube.com/my-video-link
+
+---
+
+## GitHub Repository
+
+Click on the link below:
+https://github.com/asadrahmanktk50/Attendance-Management-System/tree/main
 
 ---
 
 ## Conclusion
 
-This project helped me understand how different programming concepts work together in a real application. It was a good learning experience, especially in combining GUI, database, and logic in one system.
+This project helped in understanding how Object-Oriented Programming concepts are applied in real-world applications. It also provided practical experience in GUI development, database connectivity, and project organization using Java.
